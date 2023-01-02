@@ -1,19 +1,30 @@
 
 
-<div class="container-md">
+<div class="container-md bg-light">
   <h1>
     Notifications
   </h1>
-  <div class="card">
-    <div class="card-header">
-      Notification 1
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Primer obvestila</h5>
-      <p class="card-subtitle float-right">14.12.2022</p>
-      <p class="card-text">To obvestilo je namenjeno testiranju komponente notifications.component.html.</p>
+
+    <ul class="list-group">
 
 
+
+      <li
+
+        *ngFor="let post of allNotifications"
+
+        class="list-group-item">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-subtitle float-right">{{ post.created }}</p>
+        <p class="card-text">{{ post.description}}</p>
+
+      </li>
+
+    </ul>
+
+  <div class="row mt-2">
+    <div class="col col-md-4 offset-md-4">
+      <a class="btn btn-primary" routerLink="/notifications/create">Create</a>
     </div>
   </div>
 </div>

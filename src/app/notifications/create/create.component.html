@@ -1,0 +1,20 @@
+<div class="container">
+  <legend>Create Item</legend>
+  <form>
+    <div class="mb-3">
+      <label for="txtTitle" class="form-label">Title</label>
+      <input type="text" name="title" [(ngModel)] = "notificationForm.title" class="form-control" id="txtTitle" />
+    </div>
+    <div class="mb-3">
+      <label for="txtDescription" class="form-label">Description</label>
+      <input type="text" name="Description" [(ngModel)] = "notificationForm.description" class="form-control" id="txtDescription" />
+    </div>
+    <div class="mb-3">
+      <label for="txtCreated" class="form-label">Čas kreiranja</label>
+      <input type="text" name="Created" [(ngModel)] = "notificationForm.created"  class="form-control" id="txtCreated" value="<?= date('H:i'); ?>" />
+    </div>
+
+    <button type="button" (click)="create()" class="btn btn-primary">Create</button>
+
+  </form>
+</div>

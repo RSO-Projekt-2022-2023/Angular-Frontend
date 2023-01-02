@@ -9,9 +9,13 @@ import { HomeComponent } from './home/home.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
 import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
+import { CreateComponent } from './notifications/create/create.component';
+import {NotificationsModule} from "./notifications/module/notifications.module";
+import {FormsModule} from "@angular/forms";
+import { Component, OnInit, ViewEncapsulation, NgZone, enableProdMode } from '@angular/core';
 
+enableProdMode();
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,8 @@ import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
     NotificationsComponent,
     NavbarComponent,
     LoginComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,9 @@ import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    HttpClientModule,
+    NotificationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

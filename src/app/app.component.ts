@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocalService } from './local/local.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Polnilnice';
+
+  constructor(private localStore: LocalService) {
+
+  }
 }

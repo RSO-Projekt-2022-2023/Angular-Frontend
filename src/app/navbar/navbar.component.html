@@ -51,9 +51,14 @@
 <!--          </ul>-->
 <!--        </li>-->
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-          >Disabled</a
-          >
+          <a class="nav-link disabled" href="#" aria-disabled="true"
+          >Disabled</a>
+        </li>
+        <li *ngIf="!isUserLoggedOn()" class="nav-item">
+          <a class="nav-link" href="login">Login</a>
+        </li>
+        <li *ngIf="isUserLoggedOn()" class="nav-item">
+          <a class="nav-link" href="vehicles">Vehicles</a>
         </li>
       </ul>
       <!-- Left links -->

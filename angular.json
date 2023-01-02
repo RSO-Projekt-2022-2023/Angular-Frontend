@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "Angular-Frontend"
+  "defaultProject": "Angular-Frontend",
+  "cli": {
+    "analytics": false
+  }
 }

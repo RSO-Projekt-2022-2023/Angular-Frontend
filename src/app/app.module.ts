@@ -12,8 +12,10 @@ import { LoginComponent } from './login/login.component';
 import { VehiclesComponent } from './vehicles/vehicles/vehicles.component';
 import { CreateComponent } from './notifications/create/create.component';
 import {NotificationsModule} from "./notifications/module/notifications.module";
+import {PolnilniceModule} from "./polnilnice/module/polnilnice.module";
 import {FormsModule} from "@angular/forms";
 import { Component, OnInit, ViewEncapsulation, NgZone, enableProdMode } from '@angular/core';
+import { PolnilniceComponent } from './polnilnice/polnilnice.component';
 
 enableProdMode();
 @NgModule({
@@ -21,6 +23,7 @@ enableProdMode();
     AppComponent,
     HomeComponent,
     NotificationsComponent,
+    PolnilniceComponent,
     NavbarComponent,
     LoginComponent,
     VehiclesComponent,
@@ -34,6 +37,7 @@ enableProdMode();
     HttpClientModule,
     HttpClientModule,
     NotificationsModule,
+    PolnilniceModule,
     FormsModule
   ],
   providers: [],

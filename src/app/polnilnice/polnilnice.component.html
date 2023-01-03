@@ -1,0 +1,16 @@
+<div class="container-md bg-light">
+    <h1>Polnilnice</h1>
+
+    <ul class="list-group">
+        <li></li>
+        <li
+
+        *ngFor="let post of allPolnilnice"
+
+        class="list-group-item">
+        <p>Coords: {{ post.coord_north }}, {{ post.coord_east }}</p>
+        <p>Chargers: {{ post.chargers }}</p>
+        <p>Available: {{ post.available }}</p>
+      </li>
+    </ul>
+</div>

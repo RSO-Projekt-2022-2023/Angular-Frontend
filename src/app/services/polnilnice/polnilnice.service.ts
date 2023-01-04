@@ -13,6 +13,9 @@ import {Polnilnice} from "../../polnilnice/polnilnice";
 export class PolnilniceService {
 
   private url = 'http://localhost:8080/v1/polnilnice/';
+  private url2 = 'http://localhost:8081/v1/search/';
+
+  public coords: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,11 +24,11 @@ export class PolnilniceService {
     return this.httpClient.post<Polnilnice>(this.url, payload);
   }
   get(){
-
     return this.httpClient.get<Polnilnice[]>(this.url);
-
   }
 
-
+  search(coords: string) {
+    return this.httpClient.get(this.url2 + coords);
+  }
 
 }

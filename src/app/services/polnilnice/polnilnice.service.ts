@@ -12,8 +12,8 @@ import {Polnilnice} from "../../polnilnice/polnilnice";
 
 export class PolnilniceService {
 
-  private url = 'http://localhost:8080/v1/polnilnice/';
-  private url2 = 'http://localhost:8081/v1/search/';
+  private url = 'http://20.82.85.106/polnilnica/v1/polnilnice/';
+  private url2 = 'http://20.82.85.106/iskanje/v1/search/';
 
   public coords: any;
 

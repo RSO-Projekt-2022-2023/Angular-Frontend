@@ -17,6 +17,7 @@ import {FormsModule} from "@angular/forms";
 import { Component, OnInit, ViewEncapsulation, NgZone, enableProdMode } from '@angular/core';
 import { PolnilniceComponent } from './polnilnice/polnilnice.component';
 import { ObvestilaComponent } from './obvestila/obvestila.component';
+import { AdminComponent } from './admin/admin.component';
 
 enableProdMode();
 @NgModule({
@@ -29,7 +30,8 @@ enableProdMode();
     LoginComponent,
     VehiclesComponent,
     CreateComponent,
-    ObvestilaComponent
+    ObvestilaComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import { CreateComponent } from './notifications/create/create.component';
 import {NotificationsModule} from "./notifications/module/notifications.module";
 import {FormsModule} from "@angular/forms";
 import { Component, OnInit, ViewEncapsulation, NgZone, enableProdMode } from '@angular/core';
+import { ObvestilaComponent } from './obvestila/obvestila.component';
 
 enableProdMode();
 @NgModule({
@@ -24,7 +25,8 @@ enableProdMode();
     NavbarComponent,
     LoginComponent,
     VehiclesComponent,
-    CreateComponent
+    CreateComponent,
+    ObvestilaComponent
   ],
   imports: [
     BrowserModule,

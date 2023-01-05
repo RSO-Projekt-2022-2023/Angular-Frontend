@@ -17,6 +17,7 @@ export class NotificationsComponent implements OnInit {
 
 
 
+
   constructor(private notificationsService: NotificationsService) {}
 
   ngOnInit(): void {
@@ -30,5 +31,6 @@ export class NotificationsComponent implements OnInit {
       console.log("sem v get");
     });
   }
+
 
 }

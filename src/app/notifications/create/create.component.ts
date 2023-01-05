@@ -11,10 +11,9 @@ import {Notifications} from "../notifications";
 
 export class CreateComponent implements OnInit {
   notificationForm: Notifications = {
-    created: '',
-    description: '',
-    notificationId: 10,
-    title: '',
+    created: 'test',
+    description: 'test',
+    title: 'test',
   };
 
   constructor(private notificationService:NotificationsService,

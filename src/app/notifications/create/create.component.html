@@ -3,15 +3,15 @@
   <form>
     <div class="mb-3">
       <label for="txtTitle" class="form-label">Title</label>
-      <input type="text" name="title" [(ngModel)] = "notificationForm.title" class="form-control" id="txtTitle" />
+      <input type="text" name="title" [(ngModel)] = "notificationForm.title" class="form-control" id="txtTitle" placeholder="naslov"/>
     </div>
     <div class="mb-3">
       <label for="txtDescription" class="form-label">Description</label>
-      <input type="text" name="Description" [(ngModel)] = "notificationForm.description" class="form-control" id="txtDescription" />
+      <input type="text" name="Description" [(ngModel)] = "notificationForm.description" class="form-control" id="txtDescription" placeholder="opis"/>
     </div>
     <div class="mb-3">
       <label for="txtCreated" class="form-label">Čas kreiranja</label>
-      <input type="text" name="Created" [(ngModel)] = "notificationForm.created"  class="form-control" id="txtCreated" value="<?= date('H:i'); ?>" />
+      <input type="text" name="Created" [(ngModel)] = "notificationForm.created"  class="form-control" id="txtCreated" placeholder="datum"/>
     </div>
 
     <button type="button" (click)="create()" class="btn btn-primary">Create</button>

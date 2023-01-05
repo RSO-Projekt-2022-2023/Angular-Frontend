@@ -6,6 +6,7 @@ import { LocalService } from '../local/local.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
 
   constructor(private localService: LocalService) { }
@@ -18,6 +19,7 @@ export class NavbarComponent implements OnInit {
       return true;
     }
   }
+
 
   public signOut(){
     this.localService.clearData();

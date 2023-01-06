@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
         this.message = napaka.toString();
         return throwError(() => napaka);
       })).subscribe((data) => {
-        this.router.navigateByUrl("notifications"); 
         this.localService.saveData("currentUser", JSON.stringify(data));
+        this.router.navigateByUrl("notifications"); 
       });
   }
 

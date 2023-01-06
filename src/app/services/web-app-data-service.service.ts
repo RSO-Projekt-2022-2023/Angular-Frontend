@@ -30,6 +30,13 @@ export class WebAppDataServiceService {
     .pipe(retry(1), catchError(this.handleError))
   };
 
+  public register(user: User): Observable<User>{
+    const url: string = `${this.apiUrl}/users`;
+    return this.http
+    .post<User>(url, user)
+    .pipe(retry(1), catchError(this.handleError))
+  }
+
   public getVehiclesForUser(url1: string, userId: number): Observable<Vehicle[]> {
     const url: string = `${this.apiUrl}/${url1}/${userId}`;
     return this.http

@@ -18,6 +18,7 @@ import { Component, OnInit, ViewEncapsulation, NgZone, enableProdMode } from '@a
 import { PolnilniceComponent } from './polnilnice/polnilnice.component';
 import { ObvestilaComponent } from './obvestila/obvestila.component';
 import { AdminComponent } from './admin/admin.component';
+import { RegisterComponent } from './register/register/register.component';
 
 enableProdMode();
 @NgModule({
@@ -31,7 +32,8 @@ enableProdMode();
     VehiclesComponent,
     CreateComponent,
     ObvestilaComponent,
-    AdminComponent
+    AdminComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

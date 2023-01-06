@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Vehicle-tracker-app
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input [(ngModel)]="userRegister.username" type="text" name="userName" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input [(ngModel)]="userRegister.email" type="email" name="emai" id="userName" placeholder="Email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input [(ngModel)]="userRegister.firstName" type="text" name="firstName" id="userName" placeholder="First name">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input [(ngModel)]="userRegister.lastName" type="text" name="lastName" id="userName" placeholder="Last name">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input [(ngModel)]="userRegister.password" type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button (click)="register()" class="btn mt-3">Register</button>
+    </form>
+    <div class="text-center fs-6">
+        <p>{{this.message}}</p>
+    </div>
+</div>

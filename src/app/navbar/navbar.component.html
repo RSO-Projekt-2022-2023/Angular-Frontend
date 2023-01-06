@@ -68,7 +68,7 @@
           <a class="nav-link" href="vehicles">Vehicles</a>
         </li>
         <li *ngIf="isUserLoggedOn()" class="nav-item">
-          <a class="nav-link" >SignOut</a>
+          <a class="nav-link" (click)="signOut()" href="home">SignOut</a>
         </li>
       </ul>
       <!-- Left links -->

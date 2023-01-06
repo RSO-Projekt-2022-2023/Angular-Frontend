@@ -8,6 +8,7 @@ import {CreateComponent} from "./notifications/create/create.component";
 import {ObvestilaComponent} from "./obvestila/obvestila.component";
 import { PolnilniceComponent } from './polnilnice/polnilnice.component';
 import {AdminComponent} from "./admin/admin.component";
+import { RegisterComponent } from './register/register/register.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'obvestila', component: ObvestilaComponent},
   { path: 'polnilnice', component: PolnilniceComponent },
   { path: 'notifications/create', component: CreateComponent },
-  { path: 'admin', component: AdminComponent}
+  { path: 'admin', component: AdminComponent},
+  { path: 'register', component: RegisterComponent}
+
 ];
 
 @NgModule({

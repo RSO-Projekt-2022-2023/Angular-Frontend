@@ -27,7 +27,7 @@ export class ObvestilaService {
 
 
   public getVsaObvestila(url1: string): Observable<Obvestilo[]> {
-    const url: string = `${this.apiUrl}/${url1}`;
+    const url: string = `${this.apiUrl}`;
     return this.http
       .get<Obvestilo[]>(url)
       .pipe(retry(1), catchError(this.handleError))
@@ -35,12 +35,11 @@ export class ObvestilaService {
   }
 
   public addObvestilo(obvestilo: Object): Observable<Obvestilo> {
-    const url: string = environment.notificationsBaseUrl;
+    const url: string = `${this.apiUrl}`;
     return this.http
       .post<Obvestilo>(url, obvestilo)
       .pipe(retry(1), catchError(this.handleError))
   };
-
   public deleteObvestilo(obvestiloId: number): Observable<Object> {
     const url: string = `${this.apiUrl}/${obvestiloId}`;
     return this.http

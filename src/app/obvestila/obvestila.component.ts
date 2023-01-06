@@ -7,6 +7,7 @@ import { LocalService } from 'src/app/local/local.service';
 import { Obvestilo } from 'src/app/models/obvestilo';
 import { WebAppDataServiceService } from 'src/app/services/web-app-data-service.service';
 import {ObvestilaService} from "../services/obvestila-service.service";
+import {Vehicle} from "../models/vehicle";
 
 @Component({
   selector: 'app-obvestila',
@@ -77,7 +78,6 @@ export class ObvestilaComponent implements OnInit {
   }
 
   public addObvestilo() {
-
     this.obvestilaService
       .addObvestilo(this.novoObvestilo)
       .pipe(catchError((error: HttpErrorResponse) => {
@@ -88,7 +88,6 @@ export class ObvestilaComponent implements OnInit {
       var elem: HTMLElement = document.getElementById('message')!;
       elem.setAttribute("style", "color: green")
       let vehicles1 = this.obvestila.slice(0);
-
       vehicles1.push(obvestilo);
       this.obvestila = vehicles1;
 

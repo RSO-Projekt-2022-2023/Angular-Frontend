@@ -87,9 +87,9 @@ export class ObvestilaComponent implements OnInit {
       this.message = "Successfully added new vehicle!"
       var elem: HTMLElement = document.getElementById('message')!;
       elem.setAttribute("style", "color: green")
-      let vehicles1 = this.obvestila.slice(0);
-      vehicles1.push(obvestilo);
-      this.obvestila = vehicles1;
+      let trenutna_obvestila = this.obvestila.slice(0);
+      trenutna_obvestila.push(obvestilo);
+      this.obvestila = trenutna_obvestila;
 
     });
   }

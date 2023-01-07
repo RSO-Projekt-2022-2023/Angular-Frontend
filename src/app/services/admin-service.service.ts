@@ -5,14 +5,14 @@ import { User } from '../models/user';
 import { Vehicle } from '../models/vehicle';
 import {Obvestilo} from "../models/obvestilo";
 import {environment} from "../../environments/environment.enej";
+import {Polnilnice} from "../polnilnice/polnilnice";
 
 @Injectable({
   providedIn: 'root'
 })
+export class AdminService {
 
-export class ObvestilaService {
-
-  private apiUrl = "http://20.105.42.67/notification/v1/notifications";
+  private url = 'http://20.105.42.67/polnilnica/v1/polnilnice/';
   constructor(private http: HttpClient) { }
   private httpHeader = {
     headers: new HttpHeaders({
@@ -20,28 +20,27 @@ export class ObvestilaService {
     })
   };
 
-
   private handleError(error1: any): Promise<any> {
     console.log('There was an error', error1.error["message"] || error1.error.errmsg || error1);
     return Promise.reject(error1.error["message"]|| error1.error.errmsg || error1);
   }
 
 
-  public getVsaObvestila(url1: string): Observable<Obvestilo[]> {
-    const url: string = `${this.apiUrl}`;
+  public getVsaObvestila(url1: string): Observable<Polnilnice[]> {
+    const url: string = `${this.url}`;
     return this.http
       .get<Obvestilo[]>(url)
       .pipe(retry(1), catchError(this.handleError))
   }
 
-  public addObvestilo(obvestilo: Object): Observable<Obvestilo> {
-    const url: string = `${this.apiUrl}/`;
+  public addPolnilnice(polnilnice: Object): Observable<Polnilnice> {
+    const url: string = `${this.url}/`;
     return this.http
-      .post<Obvestilo>(url, obvestilo)
+      .post<Polnilnice>(url, polnilnice)
       .pipe(retry(1), catchError(this.handleError))
   };
   public deleteObvestilo(obvestiloId: number): Observable<Object> {
-    const url: string = `${this.apiUrl}/${obvestiloId}`;
+    const url: string = `${this.url}/${obvestiloId}`;
     return this.http
       .delete<Object>(url, this.httpHeader)
       .pipe(retry(1), catchError(this.handleError))

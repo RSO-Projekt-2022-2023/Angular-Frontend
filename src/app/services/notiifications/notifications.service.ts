@@ -14,7 +14,7 @@ import {Notifications} from "../../notifications/notifications";
 
 export class NotificationsService {
 
-  //private url = 'http://20.82.85.106/notifications/v1/notifications';
+
 
   private url = environment.notificationsBaseUrl;
 

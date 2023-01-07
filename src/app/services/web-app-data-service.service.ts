@@ -9,7 +9,9 @@ import { Vehicle } from '../models/vehicle';
 })
 export class WebAppDataServiceService {
 
-  private apiUrl = "http://localhost:8080/v1";
+  private apiUrlVozila = "http://20.105.42.67/vozila/v1";
+  private apiUrlUporabniki = "http://20.105.42.67/uporabniki/v1";
+
   constructor(private http: HttpClient) { }
   private httpHeader = {
     headers: new HttpHeaders({
@@ -24,21 +26,21 @@ export class WebAppDataServiceService {
   }
 
   public authentication(url1: string, user: User): Observable<User> {
-    const url: string = `${this.apiUrl}/${url1}`;
+    const url: string = `${this.apiUrlUporabniki}/${url1}`;
     return this.http
     .post<User>(url, user)
     .pipe(retry(1), catchError(this.handleError))
   };
 
   public register(user: User): Observable<User>{
-    const url: string = `${this.apiUrl}/users`;
+    const url: string = `${this.apiUrlUporabniki}/users`;
     return this.http
     .post<User>(url, user)
     .pipe(retry(1), catchError(this.handleError))
   }
 
   public getVehiclesForUser(url1: string, userId: number): Observable<Vehicle[]> {
-    const url: string = `${this.apiUrl}/${url1}/${userId}`;
+    const url: string = `${this.apiUrlVozila}/${url1}/${userId}`;
     return this.http
     .get<Vehicle[]>(url)
     .pipe(retry(1), catchError(this.handleError))
@@ -46,14 +48,14 @@ export class WebAppDataServiceService {
   }
 
   public addVehicle(vehicle: Object): Observable<Vehicle> {
-    const url: string = `${this.apiUrl}/vehicles`;
+    const url: string = `${this.apiUrlVozila}/vehicles`;
     return this.http
     .post<Vehicle>(url, vehicle)
     .pipe(retry(1), catchError(this.handleError))
   };
 
   public deleteVehicle(vehicleId: number): Observable<Object> {
-    const url: string = `${this.apiUrl}/vehicles/${vehicleId}`;
+    const url: string = `${this.apiUrlVozila}/vehicles/${vehicleId}`;
     return this.http
     .delete<Object>(url, this.httpHeader)
     .pipe(retry(1), catchError(this.handleError))

@@ -26,23 +26,10 @@ export class AdminService {
   }
 
 
-  public getVsaObvestila(url1: string): Observable<Polnilnice[]> {
-    const url: string = `${this.url}`;
-    return this.http
-      .get<Obvestilo[]>(url)
-      .pipe(retry(1), catchError(this.handleError))
-  }
-
   public addPolnilnice(polnilnice: Object): Observable<Polnilnice> {
     const url: string = `${this.url}/`;
     return this.http
       .post<Polnilnice>(url, polnilnice)
-      .pipe(retry(1), catchError(this.handleError))
-  };
-  public deleteObvestilo(obvestiloId: number): Observable<Object> {
-    const url: string = `${this.url}/${obvestiloId}`;
-    return this.http
-      .delete<Object>(url, this.httpHeader)
       .pipe(retry(1), catchError(this.handleError))
   };
 

@@ -5,33 +5,35 @@
     <p  class="text-white-50 mb-5"></p>
 
 
-    <h3>Administratorji</h3>
+<!--    <h3>Administratorji</h3>-->
 
-    <table class="table table-dark">
+<!--    <table class="table table-dark">-->
 
-      <thead>
-      <tr>
-        <th scope="col">Ime</th>
-        <th scope="col">Priimek</th>
-        <th scope="col">Pravice</th>
-
-
-      </tr>
-      </thead>
-
-      <tbody>
-
-        <td>Janez</td>
-        <td>Novak</td>
-        <td>Polnilnice, Obvestila</td>
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th scope="col">Ime</th>-->
+<!--        <th scope="col">Priimek</th>-->
+<!--        <th scope="col">Pravice</th>-->
 
 
-      </tbody>
+<!--      </tr>-->
+<!--      </thead>-->
+
+<!--      <tbody>-->
+
+<!--        <td>Janez</td>-->
+<!--        <td>Novak</td>-->
+<!--        <td>Polnilnice, Obvestila</td>-->
 
 
-    </table>
+<!--      </tbody>-->
 
 
+<!--    </table>-->
+
+
+
+    <p id="message">{{message}}</p>
    <h3>Dodajanje nove polnilnice</h3>
     <table class="table table-dark">
       <thead>
@@ -45,29 +47,14 @@
       <tbody>
 
       <tr>
-<!--        <td><input [(ngModel)]="novoObvestilo.title"></td>-->
-<!--        <td><input [(ngModel)]="novoObvestilo.created" placeholder="{{this.datum}}"></td>-->
-<!--        <td><input [(ngModel)]="novoObvestilo.description"></td>-->
+        <td><input size="2" [(ngModel)]="novaPolnilnica.available"></td>
+        <td><input size="2" [(ngModel)]="novaPolnilnica.chargers" ></td>
+        <td><input  size="6"[(ngModel)]="novaPolnilnica.coord_east"></td>
+        <td><input  size="6"[(ngModel)]="novaPolnilnica.coord_north"></td>
+        <td><input  [(ngModel)]="novaPolnilnica.created"></td>
 
-<!--        <td><button (click)="addObvestilo()" type="button" class="btn btn-success">add</button></td>-->
-        <td>4</td>
-        <td>5</td>
-        <td>14.541</td>
-        <td>46.068</td>
-        <td>2006-01-01T14:36:38Z</td>
-        <td>1</td>
-
-
+        <td><button (click)="addPolnilnica()" type="button" class="btn btn-success" >add</button></td>
       </tr>
-      <tr>
-        <td><input size="2"></td>
-        <td><input size="2"></td>
-        <td><input  size="6"></td>
-        <td><input size="6"></td>
-        <td><input></td>
-
-      </tr>
-
 
       </tbody>
     </table>

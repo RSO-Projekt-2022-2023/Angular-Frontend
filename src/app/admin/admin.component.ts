@@ -14,9 +14,9 @@ export class AdminComponent implements OnInit {
   public novaPolnilnica = {
     "available": "",
     "chargers": "",
-    "coord_east": "14.541",
-    "coord_north": "46.068",
-    "created": "2006-01-01T14:36:38Z"
+    "coord_east": "",
+    "coord_north": "",
+    "created": ""
   }
   constructor(private adminService: AdminService) { }
 
@@ -33,6 +33,10 @@ export class AdminComponent implements OnInit {
 
 
     });
+  }
+
+  public posljiMail(){
+    this.adminService.posljiMail();
   }
   ngOnInit(): void {
   }

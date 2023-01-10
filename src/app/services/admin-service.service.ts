@@ -32,5 +32,11 @@ export class AdminService {
       .post<Polnilnice>(url, polnilnice)
       .pipe(retry(1), catchError(this.handleError))
   };
+  public posljiMail(){
+    const url: string = `http://20.105.42.67/plosca/v1/testiranje`;
+    return this.http
+      .post<Polnilnice>(url, "")
+      .pipe(retry(1), catchError(this.handleError))
+  };
 
 }
